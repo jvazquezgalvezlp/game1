@@ -4,9 +4,9 @@ mystery_word = [ "abeja", "abejorro", "ajolote", "albatros", "alce", "almeja", "
 
 word = random.choice(mystery_word)
 def hangman():
-    alpabet = (set(string.ascii_uppercase))
-    word_letters = set(word) #letras en la palabra de mystery_word
-    used_letters = set() #letras usadas por el jugador
+    alphabet = [string.ascii_uppercase]
+    word_letters = [word] #letras en la palabra de mystery_word
+    used_letters = []  #letras usadas por el jugador
 
     chances = 6
 
