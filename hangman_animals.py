@@ -4,7 +4,7 @@ mystery_word = [ "abeja", "abejorro", "ajolote", "albatros", "alce", "almeja", "
 
 word = random.choice(mystery_word)
 def hangman():
-    alpabet = (set(string.ascii_uppercase) + ñ )
+    alpabet = (set(string.ascii_uppercase))
     word_letters = set(word) #letras en la palabra de mystery_word
     used_letters = set() #letras usadas por el jugador
 
@@ -12,7 +12,7 @@ def hangman():
 
     while len(word_letters) > 0 and chances > 0:
         #letras usadas
-        print("Te quedan," chances, "oportunidades" y ya has usado estas letras: ", "".join(used_letters))
+        print("Te quedan", chances, "oportunidades, y ya has usado estas letras: ', '".join(used_letters))
 
         # Cual es la palabra (escondida)
         word_list = [letter if letter in used_letters else "_"for letter in word]
@@ -32,12 +32,7 @@ def hangman():
             print("No he podido reconocer esta letra")
 
     if chances == 0:
-        print("GAME OVER" "Mucha suerte para la próxima partida" "La palabra era :" word)
+        print("GAME OVER" "Mucha suerte para la próxima partida" "La palabra era :" ,word,)
     else:
-        print("¡Enhorabuena!, has logrado escapar de la horca)
-
+        print("¡Enhorabuena!, has logrado escapar de la horca")
 hangman()
-
-
-
-
